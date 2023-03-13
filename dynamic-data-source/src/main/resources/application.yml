@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    ds1:
+      driverClassName: org.sqlite.JDBC
+      jdbcUrl: jdbc:sqlite::resource:ds1.db
+    ds2:
+      driverClassName: org.sqlite.JDBC
+      jdbcUrl: jdbc:sqlite::resource:ds2.db
