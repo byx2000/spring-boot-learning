@@ -11,6 +11,7 @@
     <modules>
         <module>sql-init</module>
         <module>dynamic-data-source</module>
+        <module>aop-parameter-name</module>
     </modules>
 
     <properties>
