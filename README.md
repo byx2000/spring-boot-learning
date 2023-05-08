@@ -9,3 +9,4 @@ Spring Boot的使用技巧
 | aop-parameter-name  | AOP切面中获取方法参数名               |
 | custom-starter      | 自定义Spring Boot Starter      |
 | custom-scan         | Spring Boot自定义扫描            |
+| yaml-include        | yaml文件复用                    |
