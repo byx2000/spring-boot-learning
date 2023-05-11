@@ -15,6 +15,7 @@
         <module>custom-starter</module>
         <module>custom-scan</module>
         <module>yaml-include</module>
+        <module>redis-json</module>
     </modules>
 
     <properties>
