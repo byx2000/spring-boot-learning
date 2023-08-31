@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test_db;MODE=MYSQL;
+    schema:
+      - classpath:schema.sql # 建表语句
+    data:
+      - classpath:data.sql # 数据插入语句
+    continue-on-error: true # 初始化语句执行失败时继续启动应用

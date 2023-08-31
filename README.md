@@ -11,3 +11,4 @@ Spring Boot的使用技巧
 | custom-scan         | Spring Boot自定义扫描             |
 | yaml-include        | yaml文件复用                     |
 | redis-json          | Spring Boot引入redis并使用json序列化 |
+| spring-boot-test    |Spring Boot单元测试|
