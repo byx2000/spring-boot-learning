@@ -20,6 +20,8 @@
 
 2. 在`test/resources`路径下新建配置文件`application.yml`，配置测试用的h2数据库
 
+   Spring Boot 2.5.0以前：   
+
     ```yaml
     spring:
       datasource:
@@ -30,6 +32,22 @@
           - classpath:data.sql # 数据插入语句
         continue-on-error: true # 初始化语句执行失败时继续启动应用
     ```
+   
+   Spring Boot 2.5.0以后：
+      
+   ```yaml
+   spring:
+     datasource:
+       url: jdbc:h2:mem:test_db;MODE=MYSQL;
+     sql:
+       init:
+         schema-locations:
+           - classpath:schema.sql # 建表语句
+         data-locations:
+           - classpath:data.sql # 数据插入语句
+         mode: always # 始终初始化
+         continue-on-error: true # 初始化语句执行失败时继续启动应用
+   ```
 
 3. 在`test/resources`路径下新建`schema.sql`文件，编写建表语句
 

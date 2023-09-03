@@ -19,6 +19,9 @@ Spring Boot应用程序往往需要依赖数据库，如果想把自己的项目
     INSERT INTO users (id, username, password) VALUES (3, 'user3', '789');
     ```
 3. `application.yml`文件中添加以下配置
+
+   Spring Boot 2.5.0以前：
+
     ```yml
     spring:
       datasource:
@@ -33,6 +36,26 @@ Spring Boot应用程序往往需要依赖数据库，如果想把自己的项目
         initialization-mode: always # 始终初始化
         continue-on-error: true # 初始化语句执行失败时继续启动应用
     ```
+   
+   Spring Boot 2.5.0以后：
+
+   ```yml
+   spring:
+     datasource:
+        driverClassName: xxx
+        url: xxx
+        username: xxx
+        password: xxx
+     sql:
+       init:
+         schema-locations:
+           - classpath:schema.sql # 建表语句
+         data-locations:
+           - classpath:data.sql # 数据插入语句
+         mode: always # 始终初始化
+         continue-on-error: true # 初始化语句执行失败时继续启动应用
+   ```
+
 4. 启动应用，`schema.sql`和`data.sql`中的sql语句会自动执行
 
 ## 注意事项
