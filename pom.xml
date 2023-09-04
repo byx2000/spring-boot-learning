@@ -17,6 +17,7 @@
         <module>yaml-include</module>
         <module>redis-json</module>
         <module>spring-boot-test</module>
+        <module>spring-boot-rabbitmq</module>
     </modules>
 
     <properties>

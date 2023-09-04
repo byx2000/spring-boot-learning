@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: 192.168.1.127
+    port: 5672
+    virtual-host: /
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated # 开启发送确认
+    listener:
+      simple:
+        acknowledge-mode: manual # 消费端手动确认
